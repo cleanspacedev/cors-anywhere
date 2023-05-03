@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: [],
-  originWhitelist: ['http://cleanspace.com', 'https://www.cleanspace.com'],
+  originWhitelist: ['http://app.cleanspace.com', 'https://www.app.cleanspace.com'],
   requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
@@ -46,7 +46,7 @@ cors_proxy.createServer({
   },
   
   setHeaders: {
-    "Access-Control-Allow-Origin": "https://cleanspace.com, https://www.cleanspace.com",
+    "Access-Control-Allow-Origin": "https://app.cleanspace.com, https://www.app.cleanspace.com",
     "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
   },
