@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: [],
-  originWhitelist: ['https://app.cleanspace.com', 'https://www.app.cleanspace.com'],
+  originWhitelist: ['https://app.cleanspace.com', 'https://www.app.cleanspace.com' , 'com.cleanspace.com.cleanspace', 'http://localhost:8080'],
   //requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
